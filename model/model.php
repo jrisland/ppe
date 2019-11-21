@@ -152,6 +152,35 @@ class Model {
 
     }
   }
+	  public function selectVol() {
+    $requete="select * from vol;";
+    // preparation de la requete avant execution
+    $select=$this->unPdo->prepare($requete);
+    // execution de la requete
+    $select->execute();
+    //extraction des données
+    $resultats = $select->fetchAll();
+    return $resultats;
+  }
+
+  public function insertVol($tab){
+    if($this->unPdo!=null){
+      $requete="insert into vol values(null,:idvol, :nom, :datedepart, :datearrivee, :heurearrivee)";
+      $donnees=array(":idvol"=>$tab['idvol'], ":nom"=>$tab['nom'], ":datedepart"=>$tab['datedepart'], ":datearrivee"=>$tab['datearrivee'], ":heurearrivee"=>$tab['heurearrivee']);
+      $insert=$this->unPdo->prepare($requete);
+      $insert->execute($donnees);
+    }
+  }
+
+  public function deleteVol($idvol){
+    if($this->unPdo!= null){
+      $requete="delete from vol where idvol = :idvol;";
+      $donnees=array(":idvol"=>$idvol);
+      $delete=$this->unPdo->prepare($requete);
+      $delete->execute($donnees);
+
+    }
+  }
 
 
   // fin de la classe

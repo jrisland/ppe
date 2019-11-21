@@ -32,10 +32,20 @@ class controler {
         $this->unModel->deleteObjet($idobjet);
     }
 
-    public function selectObjet() {
-        return $this->unModel->selectObjet();
+    public function selectVol() {
+        return $this->unModel->selectVol();
+    }
+	    public function insertVol($tab) {
+        $this->unModel->insertVol($tab);
     }
 
+    public function deleteVol($idvol) {
+        $this->unModel->deleteVol($idvol);
+    }
+
+    public function selectVol() {
+        return $this->unModel->selectVol();
+    }
 
   }
  ?>
