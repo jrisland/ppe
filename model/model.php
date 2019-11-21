@@ -150,6 +150,7 @@ class Model {
       $delete=$this->unPdo->prepare($requete);
       $delete->execute($donnees);
 
+
     }
   }
 	  public function selectVol() {

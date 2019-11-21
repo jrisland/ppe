@@ -26,6 +26,7 @@
     if(isset($_POST['Supprimer'])) {
         $unControler->deleteVol($_POST['idvol']);
     }
+
     echo "</div>";
     echo "</br>";
 
