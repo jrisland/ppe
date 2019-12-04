@@ -43,10 +43,5 @@ class controler {
     public function deleteVol($idvol) {
         $this->unModel->deleteVol($idvol);
     }
-
-    public function selectVol() {
-        return $this->unModel->selectVol();
-    }
-
   }
  ?>
