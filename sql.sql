@@ -72,7 +72,7 @@ CREATE table reserver(
 
 
 CREATE TABLE service(
-        idservice Int (90) NOT NULL  Auto_increment,
+        idservice Int (90) NOT NULL,
         nom       Varchar (90),
         PRIMARY KEY (idservice)
 );
