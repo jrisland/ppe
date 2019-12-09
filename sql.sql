@@ -129,12 +129,11 @@ CREATE TABLE promotion(
 CREATE TABLE disposer(
         idservice Int NOT NULL ,
         idvol     Int NOT NULL ,
-        idclient  Int NOT NULL
-    ,CONSTRAINT disposer_PK PRIMARY KEY (idservice,idvol,idclient)
+        idclient  Int NOT NULL,
+   	PRIMARY KEY (idservice,idvol,idclient),
+	FOREIGN KEY (idservice) REFERENCES service(idservice),
+    	FOREIGN KEY (idvol) REFERENCES vol(idvol),
+    	FOREIGN KEY (idclient) REFERENCES client(idclient)
+);
 
-    ,CONSTRAINT disposer_service_FK FOREIGN KEY (idservice) REFERENCES service(idservice)
-    ,CONSTRAINT disposer_vol0_FK FOREIGN KEY (idvol) REFERENCES vol(idvol)
-    ,CONSTRAINT disposer_client1_FK FOREIGN KEY (idclient) REFERENCES client(idclient)
-)ENGINE=InnoDB;
 
-INSERT INTO client VALUES(NULL,"Tang","Vaesna", "21 rue Gabriel","vaesna@gmail.com","celibataire","12345678","0780905636","vaesna");
