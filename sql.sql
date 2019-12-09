@@ -120,7 +120,6 @@ CREATE TABLE logement(
 );
 
 CREATE TABLE promotion(
-        nom         Varchar (50) ,
         pourcentage Varchar (10) ,
         idservice   Int NOT NULL ,
         PRIMARY KEY (idservice),
