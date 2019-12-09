@@ -120,8 +120,8 @@ CREATE TABLE logement(
 );
 
 CREATE TABLE promotion(
+	idservice   Int NOT NULL,
         pourcentage Varchar (10) ,
-        idservice   Int NOT NULL ,
         PRIMARY KEY (idservice),
         FOREIGN KEY (idservice) REFERENCES service(idservice)
 );
