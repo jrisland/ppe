@@ -1,4 +1,4 @@
-  <?php
+<?php
   // Appel le model
 require_once("model/model.php");
 
@@ -24,18 +24,12 @@ class controler {
         $this->unModel->inscription($tab);
     }
     
-    public function insertObjet($tab) {
-        $this->unModel->insertObjet($tab);
-    }
-
-    public function deleteObjet($idobjet) {
-        $this->unModel->deleteObjet($idobjet);
-    }
 
     public function selectVol() {
         return $this->unModel->selectVol();
 
     }
+
     public function insertVol($tab) {
         $this->unModel->insertVol($tab);
     }
@@ -43,11 +37,13 @@ class controler {
     public function deleteVol($idvol) {
         $this->unModel->deleteVol($idvol);
     } 
-     public function selectCb() {
-        return $this->unModel->selectCb();
 
+
+    public function selectCb() {
+        return $this->unModel->selectCb();
     }
-     public function insertCb($tab) {
+
+    public function insertCb($tab) {
         $this->unModel->insertCb($tab);
     }
 
@@ -55,4 +51,42 @@ class controler {
         $this->unModel->deleteCb($idcb);
     }
 
- ?>
+
+    public function selectLogement() {
+        return $this->unModel->selectLogement();
+    }
+
+    public function insertLogement($tab) {
+        $this->unModel->insertLogement($tab);
+    }
+
+    public function deleteLogement($idservice) {
+        $this->unModel->deleteLogement($idservice);
+    }
+
+
+    public function selectPromotion() {
+        return $this->unModel->selectPromotion();
+    }
+
+    public function insertPromotion($tab) {
+        $this->unModel->insertPromotion($tab);
+    }
+
+    public function deletePromotion($idservice) {
+        $this->unModel->deletePromotion($idservice);
+    }
+
+
+    public function selectLocation() {
+        return $this->unModel->selectLocation();
+    }
+    public function insertLocation($tab) {
+        $this->unModel->insertLocation($tab);
+    }
+
+    public function deleteLocation($idservice) {
+        $this->unModel->deleteLocation($idservice );
+    }
+}
+?>
