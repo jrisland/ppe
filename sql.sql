@@ -22,7 +22,7 @@ CREATE TABLE cb(
         datevalidite Date ,
         crypto       Varchar (4) ,
         idclient     Int NOT NULL,
-        PRIMARY key (idclient),
+        PRIMARY key (idcb),
         FOREIGN KEY (idclient) REFERENCES client(idclient)
 );
 
