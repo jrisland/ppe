@@ -16,7 +16,7 @@ CREATE TABLE client(
 );
 
 CREATE TABLE cb(
-        idcb         Int NOT NULL Auto_increment,
+        idcb         Int NOT NULL,
         nom          Varchar (50) ,
         numero       Varchar (50) ,
         datevalidite Date ,
