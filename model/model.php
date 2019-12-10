@@ -60,68 +60,6 @@ class Model {
         }
     }
   
-  public function insertObjet($tab) {
-    if ($this->unPdo != null) {
-      $requete = "insert into objet values (null, :type, :designation, :point);";
-      $donnees = array(":type"=>$tab['type'],
-                        ":designation"=>$tab['designation'],
-                       ":point"=>$tab['point']);
-      $insert = $this->unPdo->prepare($requete);
-      $insert->execute($donnees);
-    }
-  }
-
-  public function selectObjet(){
-    $requete="select * from objet;"; 
-    $select= $this->unPdo->prepare($requete);
-    $select->execute();
-    $resultats = $select->fetchAll();
-    return $resultats;
-  }
-
-
-  public function deleteObjet ($idobjet) {
-    if ($this->unPdo != null) {
-      $requete = "delete from objet where idobjet = ".$idobjet.";";
-      $donnees = array(":idobjet"=>$idobjet);
-      $delete = $this->unPdo->prepare($requete);
-      $delete->execute($donnees);
-    }
-  }
-
-
-
-  public function insertCategorie($tab){
-    if($this->unPdo!=null){
-      $requete="insert into categorie values(null,:libelle)";
-      $donnees=array(":libelle"=>$tab['libelle']);
-      $insert=$this->unPdo->prepare($requete);
-      $insert->execute($donnees);
-    }
-  }
-
-
-  public function deleteCategorie($idcategorie){
-    if($this->unPdo!= null){
-      $requete="delete from categorie where idcategorie = :idcategorie;";
-      $donnees=array(":idcategorie"=>$idcategorie);
-      $delete=$this->unPdo->prepare($requete);
-      $delete->execute($donnees);
-
-    }
-  }
-
-  public function selectCategorie(){
-    $requete="select * from categorie;";
-    //preparation de la requete avant execution
-    $select= $this->unPdo->prepare($requete);
-    //execution de la requete
-    $select->execute();
-    //extraction des données
-    $resultats = $select->fetchAll();
-    return $resultats;
-  }
-
 
   public function selectUtilisateur() {
     $requete="select * from utilisateur;";
@@ -214,6 +152,98 @@ class Model {
     }
   }
 
+  //location
+  public function selectLocation() {
+    $requete="select * from location;";
+    // preparation de la requete avant execution
+    $select=$this->unPdo->prepare($requete);
+    // execution de la requete
+    $select->execute();
+    //extraction des données
+    $resultats = $select->fetchAll();
+    return $resultats;
+  }
+
+  public function insertLocation($tab){
+    if($this->unPdo!=null){
+      $requete="insert into location values(:imatriculation, :n_parking, :statut, :datedebut, :datefin, :prix, :idservice)";
+      $donnees=array(":immatriculation"=>$tab['immatriculation'], ":n_parking"=>$tab['n_parking'], ":statut"=>$tab['statut'], ":datedebut"=>$tab['datedebut'], ":datefin"=>$tab['datefin'], ":prix"=>$tab['prix'], ":iservice"=>$tab['idservice']);
+      $insert=$this->unPdo->prepare($requete);
+      $insert->execute($donnees);
+    }
+  }
+
+  public function deleteLocation($idservice){
+    if($this->unPdo!= null){
+      $requete="delete from location where idservice = :idservice;";
+      $donnees=array(":idservice"=>$idservice);
+      $delete=$this->unPdo->prepare($requete);
+      $delete->execute($donnees);
+
+    }
+  }
+
+  //logement
+  public function selectLogement() {
+    $requete="select * from logement;";
+    // preparation de la requete avant execution
+    $select=$this->unPdo->prepare($requete);
+    // execution de la requete
+    $select->execute();
+    //extraction des données
+    $resultats = $select->fetchAll();
+    return $resultats;
+  }
+
+  public function insertLogement($tab){
+    if($this->unPdo!=null){
+      $requete="insert into logement values(:idservice, :adresse, :datedebut, :datefin, :nettoyage, :propriétaire, :surface, :prix)";
+      $donnees=array(":idservice"=>$tab['idservice'], ":adresse"=>$tab['adresse'], ":datedebut"=>$tab['datedebut'], ":datefin"=>$tab['datefin'], ":nettoyage"=>$tab['nettoyage'], ":propriétaire"=>$tab['propriétaire'], ":surface"=>$tab['surface'], ":prix"=>$tab['prix']);
+      $insert=$this->unPdo->prepare($requete);
+      $insert->execute($donnees);
+    }
+  }
+
+  public function deleteLogement($idservice){
+    if($this->unPdo!= null){
+      $requete="delete from logement where idservice = :idservice;";
+      $donnees=array(":idservice"=>$idservice);
+      $delete=$this->unPdo->prepare($requete);
+      $delete->execute($donnees);
+
+    }
+  }
+
+  //promotion
+  public function selectPromotion() {
+    $requete="select * from logement;";
+    // preparation de la requete avant execution
+    $select=$this->unPdo->prepare($requete);
+    // execution de la requete
+    $select->execute();
+    //extraction des données
+    $resultats = $select->fetchAll();
+    return $resultats;
+  }
+
+  public function insertPromotion($tab){
+    if($this->unPdo!=null){
+      $requete="insert into promotion values(:idservice, :pourcentage)";
+      $donnees=array(":idservice"=>$tab['idservice'], ":pourcentage"=>$tab['pourcentage']);
+      $insert=$this->unPdo->prepare($requete);
+      $insert->execute($donnees);
+    }
+  }
+
+  public function deletePromotion($idservice){
+    if($this->unPdo!= null){
+      $requete="delete from promotion where idservice = :idservice;";
+      $donnees=array(":idservice"=>$idservice);
+      $delete=$this->unPdo->prepare($requete);
+      $delete->execute($donnees);
+
+    }
+  }
 
   // fin de la classe
 }
