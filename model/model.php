@@ -216,7 +216,7 @@ class Model {
 
   //promotion
   public function selectPromotion() {
-    $requete="select * from logement;";
+    $requete="select * from promotion;";
     // preparation de la requete avant execution
     $select=$this->unPdo->prepare($requete);
     // execution de la requete
