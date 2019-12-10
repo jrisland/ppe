@@ -133,6 +133,57 @@ CREATE TABLE disposer(
 );
 
 /*Les clients*/
+INSERT INTO client VALUES(NULL,"Tang","Vaesna", "21 rue Gabriel Sartrouville 78500","vaesna@gmail.com","12345678","0780905636","vaesna","20");
+INSERT INTO client VALUES(NULL,"Walter","Trent", "7845 Cecilia St CA 90221","wtrent@gmail.com","USA546T3S","8085550146","walter","20");
+INSERT INTO client VALUES(NULL,"Hyu","Jenna", "58 Delaware St.Compton CA 90221","hjenna@gmail.com","USA5608T3S","8085550456","jenna","20");
+INSERT INTO client VALUES(NULL,"Howell","John", "778 Bradford St.Bakersfield CA 93309","hjohn@gmail.com","USA513400J","8083330456","john","20");
+INSERT INTO client VALUES(NULL,"Price","Ty", "809 8th Road Los Angeles CA 90006","pty@gmail.com","USA51343PJ","8083331111","ty","20");
+INSERT INTO client VALUES(NULL,"Holl","Morgan", "9148 Broad St.Watsonville CA 95076","hmorgan@gmail.com","USA513450M","8083332222","morgan","20");
+INSERT INTO client VALUES(NULL,"Alexander","Drew", "7661 Sulphur Springs Street Garden Grove CA 92840","dalexander@gmail.com","USA513445J","802367456","drew","20");
+INSERT INTO client VALUES(NULL,"Alexander","Emma", "7661 Sulphur Springs Street Garden Grove CA 92840","ealexander@gmail.com","USA512323J","802367333","emma","18");
+INSERT INTO client VALUES(NULL,"Alexander","Gemma", "7661 Sulphur Springs Street Garden Grove CA 92840","galexander@gmail.com","USA512323J","802367333","gemma","40");
+INSERT INTO client VALUES(NULL,"Alexander","Josh", "7661 Sulphur Springs Street Garden Grove CA 92840","jalexander@gmail.com","USA512323J","802367333","josh","45");
+INSERT INTO client VALUES(NULL,"Williams","Paige", "7106 Colonial Lane Winter Springs FL 32708","pwilliams@gmail.com","USA512323P","5125550141","paige","45");
+INSERT INTO client VALUES(NULL,"Webb","Summer", "8336 Fairground St.Miami FL 33173","swebb@gmail.com","USA512323S","5125550142","summer","45");
+INSERT INTO client VALUES(NULL,"Baker","Charlotte", "674 Ashley Lane Fort Myers FL 33912","cbaker@gmail.com","USA512323B","5125550143","charlotte","45");
+INSERT INTO client VALUES(NULL,"Morris","Lucy", "517 Westport Ave.Orlando FL 32835","lmorris@gmail.com","USA512323E","5125550144","lucy","45");
+INSERT INTO client VALUES(NULL,"Smith","Chelsea", "35 Market Drive New Port Richey FL 34653","csmith@gmail.com","USA512323D","5125550145","chelsea","45");
+INSERT INTO client VALUES(NULL,"Evans","Livie", "7778 Manchester Drive Apopka FL 32703","levans@gmail.com","USA512323C","5125550146","livie","45");
+INSERT INTO client VALUES(NULL,"Loire","Julien", "26 rue de Iena Paris", "jloire@gmail.com","FRA678901","0780905635","julien","45");
+INSERT INTO client VALUES(NULL,"Dubois","Dylan", "12 rue de Moscow Paris 75009","ddubois@gmail.com","FRA678902","0780905637","dylan","25");
+INSERT INTO client VALUES(NULL,"Jolive","Romain", "28 rue Bergé Paris 75009","rjolive@gmail.com","FRA678903","0780905638","romain","18");
+INSERT INTO client VALUES(NULL,"Lefevre","Ludovic", "29 rue Verdun Paris 75009","llefevre@gmail.com","FRA678904","0780905639","ludovic","25");
+INSERT INTO client VALUES(NULL,"Chastant","Lucas", "12 rue des Vidanges Paris 75009","lchastant@gmail.com","FRA678905","0780905631","lucas","32");
+INSERT INTO client VALUES(NULL,"Achar","Thibaut", "11 avenue Matignon Paris 75009","tachar@gmail.com","FRA678906","0780905632","thibaut","22");
+INSERT INTO client VALUES(NULL,"Launey","Francois", "10 rue Binet Paris 75009","flauney@gmail.com","FRA678907","0780905633","francois","30");
+INSERT INTO client VALUES(NULL,"Gardes","Lisa", "11 avenue honoré Neuilly sur seine 92200","lgardes@gmail.com","FRA678911","0780905644","lisa","23");
+INSERT INTO client VALUES(NULL,"Cohen","Eve", "11 avenue Saint Neuilly sur seine 92200","ecohen@gmail.com","FRA678912","0780905643","eve","19");
+INSERT INTO client VALUES(NULL,"Becker","Yoann", "8 rue des roses Neuilly sur seine 92200","ybecker@gmail.com","FRA678913","0780905642","yoann","20");
+INSERT INTO client VALUES(NULL,"Cooper","Judith", "1 rue Gabriel Neuilly sur seine 92200","jcooper@gmail.com","FRA678914","0780905641","judith","30");
+INSERT INTO client VALUES(NULL,"Jacobs","Vanessa", "2 rue des Tuiles Neuilly sur seine 92200","jvanessa@gmail.com","FRA678915","0780905645","vanessa","26");
+INSERT INTO client VALUES(NULL,"Coleman","Abi", "9 rue Massenet Neuilly sur seine 92200","acoleman@gmail.com","FRA678916","0780905646","abi","28");
+INSERT INTO client VALUES(NULL,"Newman","Jane", "15 rue du Temple Neuilly sur seine 92200","jnewman@gmail.com","FRA678917","0780905647","jane","21");
+INSERT INTO client VALUES(NULL,"Orlando","Ellie", "20 rue des Amandes Cap-Breton 40130","eorlando@gmail.com","FRA678937","0631325410","ellie","25");
+INSERT INTO client VALUES(NULL,"Jose","Jacob", "20 rue Moliere Cap-Breton 40130", "jjose@gmail.com","FRA678938","0631325411","jacob","23");
+INSERT INTO client VALUES(NULL,"Silva","Jordyn","20 rue Stalingrad Cap-Breton 40130","jsilva@gmail.com","FRA678939","0631325412","jordyn","22");
+INSERT INTO client VALUES(NULL,"Oliveira","Sylvain", "20 rue Gaumont Cap-Breton 40130","soliveira@gmail.com","FRA678931","0631325413","sylvain","26");
+INSERT INTO client VALUES(NULL,"Thuma","Diego", "21 rue des Trelles Narbonne 11100","dthuma@gmail.com","FRA678934","0631325414","diego","29");
+INSERT INTO client VALUES(NULL,"Eau","Ayden", "22 rue du Parc Narbonne 11100","aeau@gmail.com","FRA678932","0631325415","ayden","30");
+INSERT INTO client VALUES(NULL,"Morisse","Jean", "29 rue Maupassant Narbonne 11100","jmorisse@gmail.com","FRA678936","0631325416","jean","35");
+INSERT INTO client VALUES(NULL,"Adam","Olivier", "25 rue du Camp Narbonne 11100","oadam@gmail.com","FRA678933","0631325417","olivier","33");
+INSERT INTO client VALUES(NULL,"Yves","Evelyn", "2 rue Dorée Saint Germain En Laye 78100","eyves@gmail.com","FRA678925","0631325421","evelyn","31");
+INSERT INTO client VALUES(NULL,"Jean","Mia", "3 avenue des Eponges Saint Germain En Laye 78100","mjean@gmail.com","FRA678926","0631325422","mia","32");
+INSERT INTO client VALUES(NULL,"Jault","Connor", "1 avenue Cannoei Saint Germain En Laye 78100","cjault@gmail.com","FRA678927","0631325423","connor","33");
+INSERT INTO client VALUES(NULL,"Becker","Brice", "8 rue des Tulipes Saint Germain En Laye 78100","bbecker@gmail.com","FRA678928","0631325424","brice","34");
+INSERT INTO client VALUES(NULL,"Cooper","Nathan", "1 rue Orange Saint Germain En Laye 78100","ncooper@gmail.com","FRA678929","0631325425","nathan","35");
+INSERT INTO client VALUES(NULL,"Vaili","Mohammed", "7 rue des Sablons Saint Germain En Laye 78100","mvaili@gmail.com","FRA678922","0631325426","mohammed","36");
+INSERT INTO client VALUES(NULL,"Nolan","Driss", "89 Plantation Place New South Wales 2795","dnolan@gmail.com","FRA678916","0631325429","driss","24");
+INSERT INTO client VALUES(NULL,"Yuga","Anne", "7 Prince Street New South Wales 2795","ayuga@gmail.com","FRA678917","0631325328","anne","22");
+INSERT INTO client VALUES(NULL,"Eiti","Paul", "45 Duff Street GRANVILLE 6503","peiti@gmail.com","FRA678915","0631325426","paul","20");
+INSERT INTO client VALUES(NULL,"Eiti","Lea", "23 Walpole Avenue PURNIM WEST 2795","leiti@gmail.com","FRA674416","0631325429","lea","27");
+INSERT INTO client VALUES(NULL,"Mossa","Yanis", "39 Village Drive INGLEBURN MILPO 2174","ymossa@gmail.com","FRA666917","0621325428","yanis","19");
+INSERT INTO client VALUES(NULL,"Walter","Ismael", "66 McLeans Road Queensland 4630","iwalter@gmail.com","FRA888917","0631525428","ismael","18");
+
 
 /*Les cb des clients enregistrer*/
 
@@ -145,7 +196,7 @@ insert into vol values (null,"Paris-Marseille","2020/01/06","13:00:00","2020/01/
 (null,"Pointe a Pitre-Paris","2019/12/26","18:50:00","2019/12/27","06:00:00",4,3,1),
 (null,"Paris-Luxembourg","2020/01/06","13:00:00","2020/01/06","16:00:00",1,4,5),
 (null,"Luxembourg-Paris","2020/01/06","17:00:00","2020/01/06","20:00:00",5,4,1),
-(null,"Paris-Miami","2020/06/31","13:00:00","2020/06/31","22:00:00",1,5,6),
+(null,"Paris-Miami","2020/06/30","13:00:00","2020/06/31","22:00:00",1,5,6),
 (null,"Miami-Paris","2020/07/01","12:00:00","2020/07/01","21:00:00",6,5,1);
 insert into vol values (null,"Paris-Bangkok","2020/01/06","10:00:00","2020/01/06","21:00:00",1,6,7),
 (null,"Bangkok-Paris","2020/01/07","10:00:00","2020/01/07","21:00:00",7,6,1),
@@ -230,7 +281,8 @@ insert into avion values
 (9,"Andromeda","900"),
 (10,"Aquila","760"),
 (11,"Terrapin","750"),
-(12,"Pathfinder","560"),
+(12,"Pathfinder","560");
+insert into avion values
 (13,"Polaris","520"),
 (14,"Corvette","660"),
 (15,"Hurricane","520"),
@@ -267,8 +319,8 @@ INSERT INTO logement VALUES (17,"Orehbahn 47-48, 20854 Hamboourg, Allemagne","20
 INSERT INTO logement VALUES (18,"Ouacholdeerweg 52a, 26133 Oldenbourg, Allemagne","19-10-2019-10-19","25-10-2019-10-25","Propre","Dario Alessandro Barbanti-Flick","210","2301");
 INSERT INTO logement VALUES (19,"2 rue d'Indépendance, 16027 Alegiers, Algeria","2019-07-30","2019-08-10","Graisse","Said Mohammed","15","261");
 INSERT INTO logement VALUES (20,"56 Broomfield Macroom CO. Cork, 37I8 Ireland","2019-07-31","2019-08-28","Passable","Michel Sullivan","115","2162");
-INSERT INTO logement VALUES (21,"Appartement 12, Résidenace Fallou Ndiaye, 12 Avenue Cheikh Anta Diop, 12500 Senegal","2019-05-05","2019-06-19","Terni","Amadou Diop","56","123");
-INSERT INTO logement VALUES (22,"1500 E Main Ave Ste 201 Springfield VA 22162-1010, Untied States of America","2019-02-19","2019-02-29","Propre","Tevis Jason","120","1500");
+INSERT INTO logement VALUES (21,"12 Avenue Cheikh Anta Diop, 12500 Senegal","2019-05-05","2019-06-19","Terni","Amadou Diop","56","123");
+INSERT INTO logement VALUES (22,"201 Springfield, Untied States of America","2019-02-19","2019-03-29","Propre","Tevis Jason","120","1500");
 INSERT INTO logement VALUES (23,"Truygguagötu 5, 220 Hafnarifirdi, Iceland","2019-06-22","2019-08-12","Passable","Guömundor Armasson","110","2056");
 INSERT INTO logement VALUES (24,"Solothurnstrasse 28, 2544 Bettlach, Switzland","2019-01-18","2019-02-06","Bien","Hotel National Zermatt","98","559");
 INSERT INTO logement VALUES (25,"27 Andilina, Triq San Guzepp, 1073 Malta","2019-11-20","2019-12-20","Passable","Dolmen Hotel","153","511");
@@ -355,19 +407,19 @@ INSERT INTO promotion VALUES (49,"5%");
 INSERT INTO promotion VALUES (50,"35%");
 
 /*promotion-service*/
-insert into service values (null, "Xbox");
-insert into service values (null, "Ubisoft");
-insert into service values (null, "Sony");
-insert into service values (null, "AGEFOS PME");
-insert into service values (null, "AGIRC-ARRCO");
-insert into service values (null, "AFT");
-insert into service values (null, "AFNOR");
-insert into service values (null, "AJE");
-insert into service values (null, "ANFA");
-insert into service values (null, "AOCDTF");
+insert into service values (null,"Xbox");
+insert into service values (null,"Ubisoft");
+insert into service values (null,"Sony");
+insert into service values (null,"AGEFOS PME");
+insert into service values (null,"AGIRC-ARRCO");
+insert into service values (null,"AFT");
+insert into service values (null,"AFNOR");
+insert into service values (null,"AJE");
+insert into service values (null,"ANFA");
+insert into service values (null,"AOCDTF");
 insert into service values (null,"CASDEN");
 insert into service values (null,"CCCA-BTP");
-insert into service values (null, "CJD");
+insert into service values (null,"CJD");
 insert into service values (null,"CISCO");
 insert into service values (null,"CGI" )
 insert into service values (null,"CGPME");
@@ -410,7 +462,7 @@ insert into service values (null,"Xiaomi");
 
 /*location de voiture pour les clients*/
 INSERT INTO location VALUES ("AA572BF","01","A louer","2019-12-06","2020-01-01","1540",1);
-INSERT INTO location VALUES ("AX589PF","02","Reserver","22-12-2019-12-22","2019-02-25","2680",2);
+INSERT INTO location VALUES ("AX589PF","02","Reserver","2019-12-22","2019-02-25","2680",2);
 INSERT INTO location VALUES ("EF965TH","03","Reserver","2020-01-13","2020-02-04","1578",3);
 INSERT INTO location VALUES ("LH584PR","04","A louer","2020-01-18","2020-02-29","1861",4);
 INSERT INTO location VALUES ("MH846ZE","05","A louer","2020-02-24","2020-03-15","1645",5);
@@ -421,7 +473,7 @@ INSERT INTO location VALUES ("DF564FE","09","A louer","2019-09-20","2019-12-18",
 INSERT INTO location VALUES ("FQ666FA","10","A louer","2019-02-25","2019-12-18","2264",10);
 INSERT INTO location VALUES ("FE956EL","11","Reserver","2019-05-13","2019-06-24","1632",11);
 INSERT INTO location VALUES ("DF996FZ","12","A louer","2019-07-23","2019-09-23","1555",12);
-INSERT INTO location VALUES ("DS868FT","13","A louer","2019-05-26","06-06-2019","946",13);
+INSERT INTO location VALUES ("DS868FT","13","A louer","2019-05-26","2019-06-06","946",13);
 INSERT INTO location VALUES ("KJ695VH","14","A Reserver","2018-12-01","2019-01-01","2664",14);
 INSERT INTO location VALUES ("FK656FA","15","A louer","2019-03-03","2019-03-28","558",15);
 INSERT INTO location VALUES ("FE515VE","16","A louer","2018-05-23","2018-06-26","999",16);
@@ -509,7 +561,7 @@ insert into service values (null,"Moussa");
 insert into service values (null,"Walter");
 
 
-//partenaire
+/*partenaire*/
 insert into partenaire values (null,"xbox","39 Quai du Président Roosevelt 92130",1);
 insert into partenaire values (null,"ubisoft","126 Rue de Lagny 93100",2);
 insert into partenaire values (null,"sony","92 Avenue de Wagram 75017",3);
@@ -560,4 +612,3 @@ insert into partenaire values (null,"OPPBTP","25 avenue du Général Leclerc 926
 insert into partenaire values (null,"RENAULT","13 - 15 Quai Le Gallo 92100",48);
 insert into partenaire values (null,"SAFRAN","2 bd du Général Martial Valin 75724",49);
 insert into partenaire values (null,"SCHNEIDER ELECTRIC FRANCE","35 rue Joseph Monnier 92500",50);
-
