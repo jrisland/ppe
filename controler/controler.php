@@ -36,12 +36,23 @@ class controler {
         return $this->unModel->selectVol();
 
     }
-	    public function insertVol($tab) {
+    public function insertVol($tab) {
         $this->unModel->insertVol($tab);
     }
 
     public function deleteVol($idvol) {
         $this->unModel->deleteVol($idvol);
+    } 
+     public function selectCb() {
+        return $this->unModel->selectCb();
+
     }
-  }
+     public function insertCb($tab) {
+        $this->unModel->insertCb($tab);
+    }
+
+    public function deleteCb($idcb) {
+        $this->unModel->deleteCb($idcb);
+    }
+
  ?>
