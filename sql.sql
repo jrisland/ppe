@@ -9,7 +9,7 @@ CREATE TABLE client(
         adresse          Varchar (50),
         email            Varchar (50),   
         numero_passeport Varchar (50),
-        tel              Int (50),
+        tel              Varchar (50),
         mdp              Varchar (50),
 	age              Varchar (50),
         PRIMARY KEY (idclient)
