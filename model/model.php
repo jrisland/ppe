@@ -153,6 +153,7 @@ class Model {
 
     }
   }
+  //vol
 	  public function selectVol() {
     $requete="select * from vol;";
     // preparation de la requete avant execution
@@ -177,6 +178,36 @@ class Model {
     if($this->unPdo!= null){
       $requete="delete from vol where idvol = :idvol;";
       $donnees=array(":idvol"=>$idvol);
+      $delete=$this->unPdo->prepare($requete);
+      $delete->execute($donnees);
+
+    }
+  }
+  //cb
+  	public function selectCb() {
+    $requete="select * from cb;";
+    // preparation de la requete avant execution
+    $select=$this->unPdo->prepare($requete);
+    // execution de la requete
+    $select->execute();
+    //extraction des données
+    $resultats = $select->fetchAll();
+    return $resultats;
+  }
+
+  public function insertCb($tab){
+    if($this->unPdo!=null){
+      $requete="insert into vol values(null,:idcb, :nom, :numero, :datevalidite, :crypto, :idclient)";
+      $donnees=array(":idcb"=>$tab['idcb'], ":nom"=>$tab['nom'], ":numero"=>$tab['numero'], ":datevalidite"=>$tab['datevalidite'], ":crypto"=>$tab['crypto'], ":idclient"=>$tab['idclient']);
+      $insert=$this->unPdo->prepare($requete);
+      $insert->execute($donnees);
+    }
+  }
+
+  public function deleteCb($idcb){
+    if($this->unPdo!= null){
+      $requete="delete from cb where idcb = :idcb;";
+      $donnees=array(":idcb"=>$idcb);
       $delete=$this->unPdo->prepare($requete);
       $delete->execute($donnees);
 
