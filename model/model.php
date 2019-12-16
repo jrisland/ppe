@@ -47,50 +47,56 @@ class Model {
   }
     
     public function inscription($tab){
-        if($this->unPdo!=null){
-            $requete="insert into client values(null,:nom, :prenom, :adresse, :email, null, null, :tel, :mdp);";
-            $donnees=array(":nom"=>$tab['nom'],
-                           ":prenom"=>$tab['prenom'],
-                           ":adresse"=>$tab['adresse'],
-                           ":email"=>$tab['email'],
-                           ":tel"=>$tab['tel'],
-                           ":mdp"=>$tab['mdp']);
-            $insert=$this->unPdo->prepare($requete);
-            $insert->execute($donnees);
-        }
+      if($this->unPdo!=null){
+          $requete="insert into client values(null,:nom, :prenom, :adresse, :email, NULL, :tel, :mdp);";
+          $donnees=array(":nom"=>$tab['nom'],
+                          ":prenom"=>$tab['prenom'],
+                          ":adresse"=>$tab['adresse'],
+                          ":email"=>$tab['email'],
+                          ":tel"=>$tab['tel'],
+                          ":mdp"=>$tab['mdp']);
+          $insert=$this->unPdo->prepare($requete);
+          $insert->execute($donnees);
+      }
     }
   
-
-  public function selectUtilisateur() {
-    $requete="select * from utilisateur;";
+    //client
+  public function selectClient() {
+    $requete="select * from client;";
     // preparation de la requete avant execution
     $select=$this->unPdo->prepare($requete);
     // execution de la requete
     $select->execute();
-    //extraction des données
+    //extraction des données           
     $resultats = $select->fetchAll();
     return $resultats;
   }
 
-  public function insertUtilisateur($tab){
+  public function insertClient($tab){
     if($this->unPdo!=null){
-      $requete="insert into utilisateur values(null,:login :mdp :nom :prenom)";
-      $donnees=array(":login"=>$tab['login'], ":mdp"=>$tab['mdp'], ":nom"=>$tab['nom'], ":prenom"=>$tab['prenom']);
+      $requete="insert into client values(null,:idclient, :nom, :prenom, :adresse, :email, :numero_passeport, :tel, :mdp, :age)";
+      $donnees=array(":idclient"=>$tab['idclient'], 
+                     ":nom"=>$tab['nom'], ":prenom"=>$tab['prenom'], 
+                     ":adresse"=>$tab['adresse'], 
+                     ":email"=>$tab['email'], 
+                     ":numero_passseport"=>$tab['numero_passeport'], 
+                     ":tel"=>$tab['tel'], 
+                     ":mdp"=>$tab['mdp'], 
+                     ":age"=>$tab['age']);
       $insert=$this->unPdo->prepare($requete);
       $insert->execute($donnees);
     }
   }
 
-  public function deleteUtilisateur($iduser){
+  public function deleteClient($idclient){
     if($this->unPdo!= null){
-      $requete="delete from utilisateur where iduser = :iduser;";
-      $donnees=array(":iduser"=>$iduser);
+      $requete="delete from client where idclient = :idclient;";
+      $donnees=array(":idclient"=>$idclient);
       $delete=$this->unPdo->prepare($requete);
       $delete->execute($donnees);
-
-
     }
   }
+
   //vol
 	  public function selectVol() {
     $requete="select * from vol;";
@@ -106,7 +112,11 @@ class Model {
   public function insertVol($tab){
     if($this->unPdo!=null){
       $requete="insert into vol values(null,:idvol, :nom, :datedepart, :datearrivee, :heurearrivee)";
-      $donnees=array(":idvol"=>$tab['idvol'], ":nom"=>$tab['nom'], ":datedepart"=>$tab['datedepart'], ":datearrivee"=>$tab['datearrivee'], ":heurearrivee"=>$tab['heurearrivee']);
+      $donnees=array(":idvol"=>$tab['idvol'], 
+                     ":nom"=>$tab['nom'], 
+                     ":datedepart"=>$tab['datedepart'], 
+                     ":datearrivee"=>$tab['datearrivee'], 
+                     ":heurearrivee"=>$tab['heurearrivee']);
       $insert=$this->unPdo->prepare($requete);
       $insert->execute($donnees);
     }
@@ -135,8 +145,12 @@ class Model {
 
   public function insertCb($tab){
     if($this->unPdo!=null){
-      $requete="insert into vol values(null,:idcb, :nom, :numero, :datevalidite, :crypto, :idclient)";
-      $donnees=array(":idcb"=>$tab['idcb'], ":nom"=>$tab['nom'], ":numero"=>$tab['numero'], ":datevalidite"=>$tab['datevalidite'], ":crypto"=>$tab['crypto'], ":idclient"=>$tab['idclient']);
+      $requete="insert into vol values(null,:idcb, :nom, :numero, :datevalidite, :idclient)";
+      $donnees=array(":idcb"=>$tab['idcb'], 
+      ":nom"=>$tab['nom'], 
+      ":numero"=>$tab['numero'], 
+      ":datevalidite"=>$tab['datevalidite'],  
+      ":idclient"=>$tab['idclient']);
       $insert=$this->unPdo->prepare($requete);
       $insert->execute($donnees);
     }
@@ -167,7 +181,13 @@ class Model {
   public function insertLocation($tab){
     if($this->unPdo!=null){
       $requete="insert into location values(:imatriculation, :n_parking, :statut, :datedebut, :datefin, :prix, :idservice)";
-      $donnees=array(":immatriculation"=>$tab['immatriculation'], ":n_parking"=>$tab['n_parking'], ":statut"=>$tab['statut'], ":datedebut"=>$tab['datedebut'], ":datefin"=>$tab['datefin'], ":prix"=>$tab['prix'], ":iservice"=>$tab['idservice']);
+      $donnees=array(":immatriculation"=>$tab['immatriculation'], 
+      ":n_parking"=>$tab['n_parking'], 
+      ":statut"=>$tab['statut'], 
+      ":datedebut"=>$tab['datedebut'], 
+      ":datefin"=>$tab['datefin'], 
+      ":prix"=>$tab['prix'], 
+      ":iservice"=>$tab['idservice']);
       $insert=$this->unPdo->prepare($requete);
       $insert->execute($donnees);
     }
@@ -198,7 +218,14 @@ class Model {
   public function insertLogement($tab){
     if($this->unPdo!=null){
       $requete="insert into logement values(:idservice, :adresse, :datedebut, :datefin, :nettoyage, :propriétaire, :surface, :prix)";
-      $donnees=array(":idservice"=>$tab['idservice'], ":adresse"=>$tab['adresse'], ":datedebut"=>$tab['datedebut'], ":datefin"=>$tab['datefin'], ":nettoyage"=>$tab['nettoyage'], ":propriétaire"=>$tab['propriétaire'], ":surface"=>$tab['surface'], ":prix"=>$tab['prix']);
+      $donnees=array(":idservice"=>$tab['idservice'], 
+      ":adresse"=>$tab['adresse'], 
+      ":datedebut"=>$tab['datedebut'], 
+      ":datefin"=>$tab['datefin'], 
+      ":nettoyage"=>$tab['nettoyage'], 
+      ":propriétaire"=>$tab['propriétaire'], 
+      ":surface"=>$tab['surface'], 
+      ":prix"=>$tab['prix']);
       $insert=$this->unPdo->prepare($requete);
       $insert->execute($donnees);
     }
@@ -229,7 +256,8 @@ class Model {
   public function insertPromotion($tab){
     if($this->unPdo!=null){
       $requete="insert into promotion values(:idservice, :pourcentage)";
-      $donnees=array(":idservice"=>$tab['idservice'], ":pourcentage"=>$tab['pourcentage']);
+      $donnees=array(":idservice"=>$tab['idservice'], 
+      ":pourcentage"=>$tab['pourcentage']);
       $insert=$this->unPdo->prepare($requete);
       $insert->execute($donnees);
     }
