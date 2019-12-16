@@ -1,6 +1,13 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <br>
 <br>
 <body class="bg-dark">
+<div class="col-sm-0 col-md-2 col-lg-3"></div>
+<div class="col-sm-12 col-md-8 col-lg-6">
+<div class="form-group">
+    <input class="form-control" type="text" id="search" value="" placeholder="Recherche"/>
+</div>
+</div>
 <div class="container" style="width: 50%; margin: auto; padding-top: 2%;">
     <h2 class="text-white"><ins>Liste des Locations</ins></h2>
     <br>
@@ -24,7 +31,7 @@
     echo "<div class='col-4'";
     require_once ("vue/location_delete.php");
     if(isset($_POST['Supprimer'])) {
-        $unControler->deleteLocation($_POST['idvol']);
+        $unControler->deleteLocation($_POST['idservice']);
     }
 
     echo "</div>";
@@ -32,12 +39,30 @@
 
     // Appel de la methode du controler
     echo "<div class='col-4'>";
-    $result = $unControler->selectVol();
+    $result = $unControler->selectLocation();
     require_once ("vue/location.php");
     echo "</div>";
     echo "</div>";
     echo "</div>";
     ?>
+
+<script>
+        $(document).ready(function() {
+            $('#search').keyup(function(){
+                alert('ok');
+                
+                var client = $(this).val();
+
+                console.log(client);
+            });
+        });
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </div>
 </body>
 </html>
