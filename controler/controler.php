@@ -86,7 +86,19 @@ class controler {
     }
 
     public function deleteLocation($idservice) {
-        $this->unModel->deleteLocation($idservice );
+        $this->unModel->deleteLocation($idservice);
+    }
+
+
+    public function selectClient() {
+        return $this->unModel->selectClient();
+    }
+    public function insertClient($tab) {
+        $this->unModel->insertClient($tab);
+    }
+
+    public function deleteClient($idclient) {
+        $this->unModel->deleteClient($idclient);
     }
 }
 ?>
